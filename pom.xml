@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.nutz</groupId>
+	<artifactId>nutz-mipush-sdk</artifactId>
+	<version>3.0.MOD</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<description>小米官方SDK的反编译后的源码,稍微改一下,用log4j输出日志</description>
+	<name>nutz-mipush-sdk</name>
+
+	<url>http://nutz.cn</url>
+	<issueManagement>
+		<system>Github Issue</system>
+		<url>http://github.com/nutzam/nutz-mipush-sdk/issues</url>
+	</issueManagement>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>wendal</id>
+			<name>Wendal Chen</name>
+			<email>wendal1985@gmail.com</email>
+			<url>http://wendal.net/</url>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://github.com/nutzam/nutz-mipush-sdk.git</connection>
+		<developerConnection>scm:git:git://github.com/nutzam/nutz-mipush-sdk.git</developerConnection>
+		<url>git://github.com/nutzam/nutz-mipush-sdk.git</url>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>junit</artifactId>
+					<groupId>junit</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-snapshots</id>
+			<name>Sonatype Nexus snapshot repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+
+		<repository>
+			<id>sonatype-release-staging</id>
+			<name>Sonatype Nexus release repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
+</project>
